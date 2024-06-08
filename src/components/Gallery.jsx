@@ -19,9 +19,9 @@ export default function Gallery() {
 		slidesToScroll: 1,
 		responsive: [
 			{
-				breakpoint: 1023,
+				breakpoint: 1200,
 				settings: {
-					slidesToShow: 3,
+					slidesToShow: 2,
 					slidesToScroll: 1,
 					infinite: true,
 				}
@@ -29,7 +29,7 @@ export default function Gallery() {
 			{
 				breakpoint: 768,
 				settings: {
-					slidesToShow: 2,
+					slidesToShow: 1,
 					slidesToScroll: 1,
 				}
 			},

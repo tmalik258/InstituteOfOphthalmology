@@ -10,7 +10,7 @@ export default function Footer() {
         <h2 className="text-2xl font-semibold uppercase mb-2">
           Institute of Ophthalmology <br /> Mombasa{" "}
         </h2>
-        <p>
+        <p className="text-justify">
           The establishment of an Institute of Ophthalmology in Mombasa, Kenya,
           in association with the University of Lahore, offers a ground-breaking
           chance to tackle the urgent problem of preventable blindness and

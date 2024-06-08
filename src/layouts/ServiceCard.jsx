@@ -6,7 +6,7 @@ export default function ServiceCard({ heading, text, icon }) {
 		<div className="service-icon">{ icon }</div>
 		<div>
 			<h3 className="text-3xl font-bold">{ heading }</h3>
-			<p className="text-slate-500">{ text }</p>
+			<p className="text-slate-500 line-clamp-5">{ text }</p>
 		</div>
 	</div>
   )

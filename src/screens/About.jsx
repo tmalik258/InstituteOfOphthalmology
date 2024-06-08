@@ -5,7 +5,7 @@ import AboutCard from "../layouts/AboutCard";
 
 export default function About() {
 	return (
-		<>
+		<div className="container mx-auto flex flex-col gap-20">
 			<AboutCard
 				img={aboutUsImg}
 				heading="About Us"
@@ -42,6 +42,6 @@ export default function About() {
 				text="Our vision is to be a leading center of excellence in eye care, research, and education, dedicated to improving vision health and enhancing the quality of life for individuals in our
 				community and beyond. Our mission is to provide high-quality, compassionate, and personalized eye care services using the latest advancements in ophthalmology, conduct ground-breaking research to find new solutions for eye diseases, and offer robust training programs for aspiring ophthalmologists and allied health professionals. We are committed to promoting eye health awareness, supporting underserved populations through outreach programs, and contributing to the global advancement of ophthalmology through collaboration, research, and the dissemination of knowledge."
 			/>
-		</>
+		</div>
 	);
 }
