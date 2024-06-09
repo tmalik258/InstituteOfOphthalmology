@@ -2,33 +2,33 @@ import SectionHeading from "../layouts/SectionHeading";
 import DoctorExpertiseCard from "../layouts/DoctorExpertiseCard";
 import PropTypes from "prop-types";
 import SearchCard from "./SearchCard";
-import { useEffect, useState } from "react";
+import { useMemo, useState } from "react";
+import { memo } from "react";
 
-export default function PageLayout({ initialData, heading, searchHeading, text }) {
-	const [data, setData] = useState(initialData);
+function PageLayout({ initialData, heading, searchHeading, text }) {
 	const [name, setName] = useState("");
 
 	const handleName = (newValue) => {
 		setName(newValue);
-	}
+	};
 
-	const handleSubmit = () => {
-		const newData = initialData.filter((value) => value.name.toLowerCase().includes(name.toLowerCase()));
-		setData(newData);
-	}
-
-	useEffect(() => {
-		const newData = initialData.filter((value) => value.name.toLowerCase().includes(name.toLowerCase()));
-		setData(newData);
-	}, [name, initialData])
+	const filteredData = useMemo(() => {
+		return initialData.filter((value) =>
+			value.name.toLowerCase().includes(name.toLowerCase())
+		);
+	}, [name, initialData]);
 
 	return (
 		<div className="container mx-auto p-5">
 			<SectionHeading heading={heading} text={text} />
-			<SearchCard heading={searchHeading} value={name} handleName={handleName} handleSubmit={handleSubmit} />
+			<SearchCard
+				heading={searchHeading}
+				value={name}
+				handleName={handleName}
+			/>
 			<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10">
-				{data &&
-					data.map((value, id) => (
+				{filteredData &&
+					filteredData.map((value, id) => (
 						<DoctorExpertiseCard
 							key={id}
 							heading={value.name}
@@ -47,3 +47,7 @@ PageLayout.propTypes = {
 	text: PropTypes.string.isRequired, // text is a required string
 	initialData: PropTypes.array.isRequired, // initialData is a required array
 };
+
+const MemoizedPageLayout = memo(PageLayout);
+
+export default MemoizedPageLayout;

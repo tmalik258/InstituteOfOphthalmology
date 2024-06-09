@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+import { memo } from 'react';
 
-export default function FacilityCard({ icon, text, highlight }) {
+function FacilityCard({ icon, text, highlight }) {
   return (
 	<div className={`flex flex-col gap-4 items-center justify-center facility-card ${highlight && ('highlight-facility')}`}>
 		<div className='text-[#99DFFF]'>{ icon }</div>
@@ -11,7 +12,10 @@ export default function FacilityCard({ icon, text, highlight }) {
 
 FacilityCard.propTypes = {
 	text: PropTypes.string.isRequired,  // text is a required string
-	icon: PropTypes.any.isRequired,  // icon is a required component
-	highlight: PropTypes.bool.isRequired,  // icon is a required component
+	icon: PropTypes.elementType.isRequired,  // icon is a required component
+	highlight: PropTypes.bool.isRequired,  // highlight is a required bool
 };
-  
+
+const MemoizedFacilityCard = memo(FacilityCard);
+
+export default MemoizedFacilityCard;

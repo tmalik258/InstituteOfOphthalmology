@@ -1,8 +1,14 @@
 import logo from "../assets/IOM logo.png";
 import { FaFacebook, FaTwitter } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
+import { animateScroll as scroll } from 'react-scroll';
 
 export default function Footer() {
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  }
+
   return (
     <footer className="flex flex-col sm:flex-row gap-5 md:gap-0 px-5 md:px-0 justify-evenly items-center py-20">
       <div className="basis-1/3">
@@ -21,21 +27,21 @@ export default function Footer() {
       <div className="flex flex-row md:flex-col gap-2 text-xl">
         <ul className="flex flex-row md:flex-col items-center gap-2">
           <li>
-            <a href="">About</a>
+            <Link onClick={scrollToTop} to="/about-us">About</Link>
           </li>
           <li>
-            <a href="">Blog</a>
+            <Link onClick={scrollToTop} to="/insights">Blog</Link>
           </li>
           <li>
-            <a href="">Gallery</a>
+            <Link onClick={scrollToTop} to="/gallery">Gallery</Link>
           </li>
         </ul>
         <ul className="flex flex-row md:flex-col items-center gap-2">
           <li>
-            <a href="">Doctors</a>
+            <Link onClick={scrollToTop} to="/our-doctors">Doctors</Link>
           </li>
           <li>
-            <a href="">Services</a>
+            <Link onClick={scrollToTop} to="/expertise">Services</Link>
           </li>
         </ul>
       </div>
@@ -43,17 +49,17 @@ export default function Footer() {
         <ul className="flex flex-row md:flex-col gap-2 text-xl items-center">
           <li>Follow us</li>
           <li>
-            <a href="">
+            <a href="#">
               <FaFacebook size={28} />
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#">
               <RiInstagramFill size={28} />
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#">
               <FaTwitter size={28} />
             </a>
           </li>

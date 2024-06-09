@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+import { memo } from 'react';
 
-export default function ServiceCard({ heading, text, icon }) {
+function ServiceCard({ heading, text, icon }) {
   return (
 	<div className='service-card flex justify-center items-center gap-7 px-5 m-5'>
 		<div className="service-icon">{ icon }</div>
@@ -15,5 +16,9 @@ export default function ServiceCard({ heading, text, icon }) {
 ServiceCard.propTypes = {
 	heading: PropTypes.string.isRequired,  // heading is a required string
 	text: PropTypes.string.isRequired,  // text is a required string
-	icon: PropTypes.any.isRequired,  // icon is a required component
+	icon: PropTypes.elementType.isRequired,  // icon is a required component
 };
+
+const MemoizedServiceCard = memo(ServiceCard);
+
+export default MemoizedServiceCard;

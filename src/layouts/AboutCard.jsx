@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
+import { memo } from 'react';
 
-export default function AboutCard({img, heading, text, classN="flex-row"}) {
+function AboutCard({img, heading, text, classN="flex-row"}) {
 	return (
 		<div className={`flex max-sm:flex-col ${classN} gap-7 lg:gap-20 max-sm:p-7`}>
 			<div className="basis-1/2">
@@ -9,7 +10,7 @@ export default function AboutCard({img, heading, text, classN="flex-row"}) {
 				</p>
 			</div>
 			<div className="rounded-3xl basis-1/2 max-h-[645px] overflow-hidden">
-				<img src={img} className='h-full w-full object-cover object-top' alt="about the project" />
+				<img src={img} decoding='async' className='h-full w-full object-cover object-top' alt={heading} />
 			</div>
 		</div>
 	);
@@ -18,6 +19,10 @@ export default function AboutCard({img, heading, text, classN="flex-row"}) {
 AboutCard.propTypes = {
 	heading: PropTypes.string.isRequired,  // heading is a required string
 	text: PropTypes.string.isRequired,  // text is a required string
-	classN: PropTypes.string.isRequired,  // text is a required string
-	img: PropTypes.object.isRequired,  // icon is a required component
+	classN: PropTypes.string.isRequired,  // classN is a required string
+	img: PropTypes.string.isRequired,  // img is a required string
 };
+
+const MemoizedAboutCard = memo(AboutCard);
+
+export default MemoizedAboutCard;
