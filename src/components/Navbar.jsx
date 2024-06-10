@@ -37,7 +37,9 @@ function Navbar() {
 	return (
 		<div className='container mx-auto'>
 			<nav className='flex justify-between items-center'>
-				<Link to="/"><img src={logo} width={150} alt="Hospital Logo" className='z-20' /></Link>
+				<div className='z-20'>
+					<Link to="/"><img src={logo} width={150} alt="Hospital Logo" /></Link>
+				</div>
 				<ul className='hidden lg:flex gap-10'>
 					<NavLinks closeMenu={closeMenu} />
 				</ul>
