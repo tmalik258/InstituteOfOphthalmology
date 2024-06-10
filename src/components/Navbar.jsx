@@ -3,6 +3,7 @@ import logo from '../assets/IOM logo.png';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import Contact from '../models/Contact';
 import NavLinks from './NavLinks';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
 	const [menu, setMenu] = useState(false);
@@ -36,7 +37,7 @@ function Navbar() {
 	return (
 		<div className='container mx-auto'>
 			<nav className='flex justify-between items-center'>
-				<img src={logo} width={150} alt="Hospital Logo" className='z-20' />
+				<Link to="/"><img src={logo} width={150} alt="Hospital Logo" className='z-20' /></Link>
 				<ul className='hidden lg:flex gap-10'>
 					<NavLinks closeMenu={closeMenu} />
 				</ul>
