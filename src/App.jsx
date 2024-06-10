@@ -5,6 +5,7 @@ import Expertise from "./screens/Expertise";
 import Doctors from "./screens/Doctors";
 import NoPage from "./screens/NoPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Gallery from "./screens/Gallery";
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 						<Route path="/about-us" element={<About />} />
 						<Route path="/expertise" element={<Expertise />} />
 						<Route path="/our-doctors" element={<Doctors />} />
+						<Route path="/gallery" element={<Gallery />} />
 						<Route path="/*" element={<NoPage />} />
 					</Route>
 				</Routes>
