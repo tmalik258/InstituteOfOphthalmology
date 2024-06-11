@@ -14,7 +14,7 @@ export default function Footer() {
       <div className="basis-1/3">
         <img src={logo} width={100} className="relative right-4" alt="Logo" />
         <h2 className="text-2xl font-semibold uppercase mb-2">
-          Institute of Ophthalmology <br /> Mombasa{" "}
+          Institute of Ophthalmology <br /> Mombasa
         </h2>
         <p className="text-justify">
           The establishment of an Institute of Ophthalmology in Mombasa, Kenya,
