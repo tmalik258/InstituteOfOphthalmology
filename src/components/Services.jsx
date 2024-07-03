@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import ServiceCard from '../layouts/ServiceCard';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useRef } from 'react';
-import { FaBinoculars, FaEye, FaGlasses, FaHeartbeat, FaProcedures, FaStethoscope, FaSyringe, FaXRay } from "react-icons/fa";
+import { FaBinoculars, FaEye, FaGlasses, FaProcedures, FaSyringe } from "react-icons/fa";
 
 export default function Services() {
 	const slider = useRef(null);
