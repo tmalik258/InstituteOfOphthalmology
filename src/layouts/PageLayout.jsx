@@ -27,8 +27,8 @@ function PageLayout({
 	}, [name, initialData]);
 
 	const comingSoonFilteredData = useMemo(() => {
-		return filterDataByName(comingSoonData, name);
-	}, [name, comingSoonData]);
+		return comingSoon && filterDataByName(comingSoonData, name);
+	}, [name, comingSoon, comingSoonData]);
 
 	return (
 		<div className="container mx-auto p-5">

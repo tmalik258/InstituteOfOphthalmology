@@ -22,7 +22,8 @@ function Navbar() {
 	}
 
 	const openContact = () => {
-		setContact(true)
+		// setContact(true)
+		window.location.href = "mailto:minstituteophthalmology@gmail.com";
 		setMenu(false);
 	}
 
