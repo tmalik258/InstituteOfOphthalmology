@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import ServiceCard from '../layouts/ServiceCard';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useRef } from 'react';
-import { FaHeartbeat, FaStethoscope, FaXRay } from "react-icons/fa";
+import { FaBinoculars, FaEye, FaGlasses, FaHeartbeat, FaProcedures, FaStethoscope, FaSyringe, FaXRay } from "react-icons/fa";
 
 export default function Services() {
 	const slider = useRef(null);
@@ -19,7 +19,7 @@ export default function Services() {
 		slidesToScroll: 1,
 		responsive: [
 			{
-				breakpoint: 1200,
+				breakpoint: 1300,
 				settings: {
 					slidesToShow: 2,
 					slidesToScroll: 1,
@@ -27,7 +27,7 @@ export default function Services() {
 				}
 			},
 			{
-				breakpoint: 768,
+				breakpoint: 1020,
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
@@ -48,11 +48,11 @@ export default function Services() {
 			<button className='absolute bottom-14 z-10 rounded-full btn-arrow' onClick={() => slider.current.slickPrev()}><IoIosArrowBack size={20} /></button>
 			<button className='absolute bottom-14 z-10 right-0 rounded-full btn-arrow' onClick={() => slider.current.slickNext()}><IoIosArrowForward size={20} /></button>
 			<Slider ref={slider} {...settings}>
-				<ServiceCard heading='Cardiology' icon={<FaHeartbeat size={50} />} text='Cardiac Centre is one of the most reputable and modern hospital......' />
-				<ServiceCard heading='ENT' icon={<FaStethoscope size={50} />} text='We offer exceptional diagnostic measures under the expert supervision of our ENT specialists.' />
-				<ServiceCard heading='Diagnostic' icon={<FaXRay size={50} />} text='Thanks for all the services, no doubt it is the best hospital.' />
-				<ServiceCard heading='Cardiology' icon={<FaHeartbeat size={50} />} text='Cardiac Centre is one of the most <br /> reputable and modern hospital......' />
-				<ServiceCard heading='Cardiology' icon={<FaHeartbeat size={50} />} text='Cardiac Centre is one of the most <br /> reputable and modern hospital......' />
+				<ServiceCard heading='Comprehensive Eye Examinations' icon={<FaEye size={50} />} text='Including vision testing, refraction, and assessment of eye health.' />
+				<ServiceCard heading='Prescription of Glasses and Contact Lenses' icon={<FaGlasses size={50} />} text='Based on the examination results.' />
+				<ServiceCard heading='Treatment of Refractive Errors' icon={<FaBinoculars size={50} />} text='Such as nearsightedness, farsightedness, and astigmatism.' />
+				<ServiceCard heading='Cataract Evaluation and Surgery' icon={<FaSyringe size={50} />} text='Diagnosis, pre-operative assessment, surgery, and post-operative care.' />
+				<ServiceCard heading='Glaucoma Management' icon={<FaProcedures size={50} />} text='Diagnosis, treatment  and monitoring.' />
 			</Slider>
 		</div>
 	)
