@@ -16,7 +16,7 @@ function GlassCard({ heading, text, icon }) {
 GlassCard.propTypes = {
 	heading: PropTypes.string.isRequired,  // heading is a required string
 	text: PropTypes.string.isRequired,  // text is a required string
-	icon: PropTypes.elementType.isRequired,  // icon is a required component
+	icon: PropTypes.object.isRequired,  // icon is a required component
 };
 
 const MemoizedGlassCard = memo(GlassCard);

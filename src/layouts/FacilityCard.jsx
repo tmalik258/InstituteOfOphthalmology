@@ -12,8 +12,8 @@ function FacilityCard({ icon, text, highlight }) {
 
 FacilityCard.propTypes = {
 	text: PropTypes.string.isRequired,  // text is a required string
-	icon: PropTypes.elementType.isRequired,  // icon is a required component
-	highlight: PropTypes.bool.isRequired,  // highlight is a required bool
+	icon: PropTypes.object.isRequired,  // icon is a required component
+	highlight: PropTypes.bool,  // highlight is a required bool
 };
 
 const MemoizedFacilityCard = memo(FacilityCard);

@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import DoctorCard from "../layouts/DoctorExpertiseCard";
 import SectionHeading from "../layouts/SectionHeading";
 import { animateScroll as scroll } from "react-scroll";
+import {memo} from 'react';
 
-export default function Team() {
+function Team() {
 	const scrollToTop = () => {
 		scroll.scrollToTop();
 	};
@@ -20,3 +21,7 @@ export default function Team() {
 	</div>
   )
 }
+
+const MemoizedTeam = memo(Team)
+
+export default MemoizedTeam

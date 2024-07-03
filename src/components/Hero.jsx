@@ -1,5 +1,4 @@
 import GlassCard from "../layouts/GlassCard";
-import cover from "../assets/doctor.jpeg";
 import { CiSearch } from "react-icons/ci";
 import { MdOutlineMedicalServices } from "react-icons/md";
 import { HiOutlinePhone } from "react-icons/hi";
@@ -32,16 +31,16 @@ export default function Hero() {
 			</div>
 			<div className="relative mx-auto max-sm:hidden">
 				<div className="hero-container">
-					<img src={cover} className="hero-cover" alt="Hero Cover" />
+					<img src={'/gallery/7.jpg'} className="hero-cover" alt="Hero Cover" />
 				</div>
-				<div className="absolute top-8 -left-10">
+				<div className="absolute top-16 -left-12">
 					<GlassCard
 						icon={<CiSearch size={28} />}
 						heading="Well Qualified doctors"
 						text="Treat with care"
 					/>
 				</div>
-				<div className="absolute bottom-36 -left-28">
+				<div className="absolute bottom-28 -left-32">
 					<GlassCard
 						icon={<MdOutlineMedicalServices size={28} />}
 						heading="Our Services"
@@ -49,7 +48,7 @@ export default function Hero() {
 medical care"
 					/>
 				</div>
-				<div className="absolute top-52 -right-24">
+				<div className="absolute bottom-52 -right-36">
 					<GlassCard
 						icon={<HiOutlinePhone size={28} />}
 						heading="Help Line"

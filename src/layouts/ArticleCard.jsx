@@ -23,7 +23,7 @@ ArticleCard.propTypes = {
 	text: PropTypes.string.isRequired,  // text is a required string
 	img: PropTypes.string.isRequired,  // img is a required string
 	classN: PropTypes.string.isRequired,  // classN is a required string
-	subClassN: PropTypes.string.isRequired,  // subClassN is a required string
+	subClassN: PropTypes.string,  // subClassN is a required string
 	postId: PropTypes.number.isRequired,  // subClassN is a required string
 };
 

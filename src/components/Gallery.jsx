@@ -4,9 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useRef } from 'react';
-import galleryOne from '../assets/gallery-1.jpeg';
-import galleryTwo from '../assets/gallery-2.jpeg';
-import galleryThree from '../assets/gallery-3.jpeg';
+import galleryImages from "../galleryImages";
 
 export default function Gallery() {
 	const slider = useRef(null);
@@ -49,9 +47,9 @@ export default function Gallery() {
 			<button className='absolute bottom-14 z-10 rounded-full btn-arrow' onClick={() => slider.current.slickPrev()}><IoIosArrowBack size={20} /></button>
 			<button className='absolute bottom-14 z-10 right-0 rounded-full btn-arrow' onClick={() => slider.current.slickNext()}><IoIosArrowForward size={20} /></button>
 			<Slider ref={slider} {...settings}>
-				<div className="gallery-img"><img src={galleryOne} alt="" /></div>
-				<div className="gallery-img"><img src={galleryTwo} alt="" /></div>
-				<div className="gallery-img"><img src={galleryThree} alt="" /></div>
+				{
+					galleryImages.map((value, id) => <div className="gallery-img" key={id}><img src={value.path} alt={value.alt} /></div>)
+				}
 			</Slider>
 		</div>
 	)
