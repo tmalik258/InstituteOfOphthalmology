@@ -1,17 +1,16 @@
 import SectionHeading from '../layouts/SectionHeading';
-import mainArticle from '../assets/main-article.jpeg';
-import secondArticle from '../assets/second-article.jpeg';
-import thirdArticle from '../assets/third-article.jpeg';
 import ArticleCard from '../layouts/ArticleCard';
+import hospitalBlogPosts from '../blogs';
 
 export default function Articles() {
+	console.log(hospitalBlogPosts[0])
   return (
 	<div>
 		<SectionHeading heading='Our Latest Articles' text='Written by our experts' />
-		<div className='grid grid-cols-1 md:grid-cols-2 gap-5 px-8'>
-			<ArticleCard img={mainArticle} classN='flex-col md:row-span-2' postId={1} heading='The Importance of Regular Health Checkups' text='Card desription. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit rhoncus imperdiet nisi.' />
-			<ArticleCard img={secondArticle} heading='Card Title' classN='flex-row' postId={2} text='Card desription. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit rhoncus imperdiet nisi.' />
-			<ArticleCard img={thirdArticle} heading='Card Title' classN='flex-row' postId={3} text='Card desription. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit rhoncus imperdiet nisi.' />
+		<div className='grid grid-cols-1 lg:grid-cols-2 gap-5 px-8'>
+			<ArticleCard img={hospitalBlogPosts[0].path} classN='flex-col md:row-span-2' postId={hospitalBlogPosts[0].id} heading={hospitalBlogPosts[0].title} text={hospitalBlogPosts[0].description} />
+			<ArticleCard img={hospitalBlogPosts[1].path} heading={hospitalBlogPosts[1].title} classN='flex-col xl:flex-row' postId={hospitalBlogPosts[1].id} text={hospitalBlogPosts[1].description} />
+			<ArticleCard img={hospitalBlogPosts[2].path} heading={hospitalBlogPosts[2].title} classN='flex-col xl:flex-row' postId={hospitalBlogPosts[2].id} text={hospitalBlogPosts[2].description} />
 		</div>
 	</div>
   )
