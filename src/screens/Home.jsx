@@ -7,7 +7,7 @@ import Gallery from "../components/Gallery";
 
 export default function Home() {
   return (
-	<div className="container flex flex-col gap-52 mx-auto">
+	<div className="container flex flex-col gap-52 mx-auto max-sm:px-5">
 		<Hero />
 		<Facilities />
 		<Team />

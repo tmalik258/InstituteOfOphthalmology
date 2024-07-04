@@ -6,6 +6,7 @@ import ServiceCard from '../layouts/ServiceCard';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useRef } from 'react';
 import { FaBinoculars, FaEye, FaGlasses, FaProcedures, FaSyringe } from "react-icons/fa";
+import hospitalServices from '../services';
 
 export default function Services() {
 	const slider = useRef(null);
@@ -48,11 +49,11 @@ export default function Services() {
 			<button className='absolute bottom-14 z-10 rounded-full btn-arrow' onClick={() => slider.current.slickPrev()}><IoIosArrowBack size={20} /></button>
 			<button className='absolute bottom-14 z-10 right-0 rounded-full btn-arrow' onClick={() => slider.current.slickNext()}><IoIosArrowForward size={20} /></button>
 			<Slider ref={slider} {...settings}>
-				<ServiceCard heading='Comprehensive Eye Examinations' icon={<FaEye size={50} />} text='Including vision testing, refraction, and assessment of eye health.' />
-				<ServiceCard heading='Prescription of Glasses and Contact Lenses' icon={<FaGlasses size={50} />} text='Based on the examination results.' />
-				<ServiceCard heading='Treatment of Refractive Errors' icon={<FaBinoculars size={50} />} text='Such as nearsightedness, farsightedness, and astigmatism.' />
-				<ServiceCard heading='Cataract Evaluation and Surgery' icon={<FaSyringe size={50} />} text='Diagnosis, pre-operative assessment, surgery, and post-operative care.' />
-				<ServiceCard heading='Glaucoma Management' icon={<FaProcedures size={50} />} text='Diagnosis, treatment  and monitoring.' />
+				{
+					hospitalServices.map((service, index) => 
+						<ServiceCard key={index} heading={service.name} icon={service.icon} text={service.description} />
+					)
+				}
 			</Slider>
 		</div>
 	)

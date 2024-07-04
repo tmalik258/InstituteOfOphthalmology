@@ -1,35 +1,49 @@
+import {
+	FaBinoculars,
+	FaEye,
+	FaGlasses,
+	FaProcedures,
+	FaSyringe,
+} from "react-icons/fa";
+
 const hospitalServices = [
 	{
 		id: 1,
-		name: "Comprehensive Eye Examinations",
+		name: "Thorough Eye Evaluation",
 		description:
 			"Including vision testing, refraction, and assessment of eye health.",
 		image: "/expertise/comprehensive-eye-examinations.jpg",
+		icon: <FaEye size={50} />,
 	},
 	{
 		id: 2,
 		name: "Prescription of Glasses and Contact Lenses",
-		description:
-			"Based on the examination results.",
+		description: "Based on the examination results.",
 		image: "/expertise/prescription-of-glasses-and-contact-lenses.jpg",
+		icon: <FaGlasses size={50} />,
 	},
 	{
 		id: 3,
 		name: "Treatment of Refractive Errors",
-		description: "Such as nearsightedness, farsightedness, and astigmatism.",
+		description:
+			"Such as nearsightedness, farsightedness, and astigmatism.",
 		image: "/expertise/treatment-of-refractive-errors.jpg",
+		icon: <FaBinoculars size={50} />,
 	},
 	{
 		id: 4,
 		name: "Cataract Evaluation and Surgery",
-		description: "Diagnosis, pre-operative assessment, surgery, and post-operative care.",
+		description:
+			"Diagnosis, pre-operative assessment, surgery, and post-operative care.",
 		image: "/expertise/cataract-evaluation-and-surgery.jpg",
+		icon: <FaSyringe size={50} />,
 	},
 	{
 		id: 5,
-		name: "Glaucoma Management",
-		description: "Diagnosis, treatment  and monitoring.",
+		name: "Glaucoma Control",
+		description: "Diagnosis, treatment, and monitoring.",
 		image: "/expertise/glaucoma-management.jpg",
+		icon: <FaProcedures size={50} />,
 	},
 	// {
 	// 	id: 6,

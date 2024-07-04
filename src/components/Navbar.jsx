@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import logo from '../assets/IOM logo.png';
+import logo from '../assets/IOM logo.webp';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import Contact from '../models/Contact';
 import NavLinks from './NavLinks';
